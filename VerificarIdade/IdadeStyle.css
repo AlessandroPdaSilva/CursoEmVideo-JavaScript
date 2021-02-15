@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* geral */
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color:darkgreen;
+}
+
+/* section */
+section{
+
+    background-color: aliceblue;
+    width: 50%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    border-radius: 15px;
+    padding: 0% 0% 5% 0%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+h1 {
+    font-family: sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 3%;
+    color: whitesmoke;
+}
+p{
+    font-family: sans-serif;
+    font-size: large;
+    padding: 2%;
+}
+
+/* formulario */
+div.formulario{
+    margin:0%;
+    padding: 5%;
+}
+p#nascimento{
+    padding-bottom: 1%;
+}
+p#sexo{
+    margin-top:2% ;
+    margin-bottom: 2%;
+}
+#botao{
+    padding: 1%;
+    margin-top: 2%;    
+}
+hr{width: 60%;margin: auto;}
+
+div#txtResp p{
+    text-align: center;
+    
+}
+img#img{
+    display: block;
+    position: relative;
+    margin: auto;
+    border-radius: 100%;
+    width: 35%;
+}
+input#botao{
+    width: 20%;
+    background-color:rgba(0, 0, 0, 0.438);
+    border: none;
+    border-radius: 15px;
+    color: whitesmoke;
+}
+input#botao:hover{
+    background-color: rgba(10, 77, 202, 0.801);
+    color: whitesmoke;
+}
+
+
+/* rodape */
+footer{
+    text-align: center;
+    padding: 1%;
+    color: whitesmoke;
+    
+    width: 25%;
+    margin-left: auto;
+    margin-right:auto ;
+    margin-top: 1%;
+    border-radius: 15px;
+}

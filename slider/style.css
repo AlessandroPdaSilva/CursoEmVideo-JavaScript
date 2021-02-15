@@ -1,0 +1,46 @@
+.box{
+
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+}
+
+.box-image img{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    animation: anima;
+    animation-duration: 800ms;    
+}
+
+@keyframes anima{
+
+    from{transform: translate(-50px,00);}
+    to{transform: translate(0px,00);}
+}
+
+
+.bolinhas{
+
+    margin-left: 400px;
+}
+
+.bolinhas span{
+
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: red;
+}
+
+.bolinhas span.marcador{
+
+   background-color: blue;
+}
+
+
+
+

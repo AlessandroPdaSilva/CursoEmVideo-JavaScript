@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Verificador de Idade </title>
+    <link rel="stylesheet" href="IdadeStyle.css">
+
+</head>
+
+<body>
+    <h1> Verificador de Idade</h1>
+    <section>
+
+        <div class="formulario">
+            <p id="nascimento">
+                <!-- caixa nacimento-->
+                Ano de Nascimento:
+                <input type="number" name="nasc" id="nasc" min="0">
+            </p>
+
+            <p id="sexo">
+                Sexo:
+                <!-- caixa sexo-->
+                <input type="radio" name="Sexo" id="sexoMasc"> <label for="sexoMasc" id="LsexoMasc"> Masculino </label>
+                <!-- caixa sexo-->
+                <input type="radio" name="Sexo" id="sexoFem"> <label for="sexoFem"> Feminino </label>
+
+            </p>
+
+            <p>
+                <input type="button" value="Verificar" id="botao" onclick="verificar()">
+            </p>
+        </div>
+
+        <hr>
+        <div id="txtResp">
+            <p>  </p>
+        </div>
+
+        <img src="" alt="" id="img">
+
+        <script>
+            function verificar() {
+                //var nascimento
+                var date = new Date()
+                var anoAtual = date.getFullYear()
+
+                // var nascimento usuario
+                var anoDigitado = window.document.getElementById('nasc')
+                var ano = Number(anoDigitado.value)
+
+
+
+                
+
+
+                //testes 
+
+
+
+                if(ano < 0 || ano > anoAtual){
+                    window.alert('Valor de nascimento invalido')// invalido
+                }else{
+                    // var sexo
+                    var sexo = window.document.getElementsByName('Sexo')
+                    var sexotext = ''
+                    var idade = anoAtual - ano
+                    // var imagem
+                    var imagem = document.getElementById('img')
+                   
+                    // var caixa resposta
+                    var textResp = document.getElementById('txtResp')
+                    if(sexo[0].checked){
+                        // if masculino
+                        sexotext = 'masculino'
+                        if (idade >= 0 && idade < 10){
+                            // if  crianca
+                            imagem.src = 'icone/crianca-homem-icone.jpg'
+                            //  imprimir
+                            textResp.innerHTML =` <p> ${idade} anos</p>`
+                        }else if(idade < 21){
+                            // if  jovem
+                            imagem.src = 'icone/jovem-homem-icone.jpg'
+                            // imprimir
+                            textResp.innerHTML =` <p> ${idade} anos</p>`
+                        }else if(idade < 50){
+                            // if adulto
+                            imagem.src = 'icone/adulto-homem-icone.jpg'
+                            //imprimir
+                            textResp.innerHTML =` <p> ${idade} anos</p>`
+                        }else{
+                            // if idoso
+                            imagem.src = 'icone/velho-homem-icone.jpg'
+                            //imprimir
+                            textResp.innerHTML =` <p> ${idade} anos</p>`
+                        }
+                    }else{
+                        // if feminino
+                        sexotext = 'feminino'
+                        if (idade >= 0 && idade < 10){
+                            // if crianca
+                            imagem.src = 'icone/crianca-mulher-icone.jpg'
+                            //imprimir
+                            textResp.innerHTML =` <p> ${idade} anos</p>`
+                        }else if(idade < 21){
+                            // if jovem
+                            imagem.src = 'icone/jovem-mulher-icone.jpg'
+                            //imprimir
+                            textResp.innerHTML =` <p> ${idade} anos</p>`
+                        }else if(idade < 50){
+                            // if adulto
+                            imagem.src = 'icone/adulto-mulher-icone.jpg'
+                            //imprimir
+                            textResp.innerHTML =` <p> ${idade} anos</p>`
+                        }else{
+                            // if idoso
+                            imagem.src = 'icone/velho-mulher-icone.jpg'
+                            //imprimir
+                            textResp.innerHTML =` <p> ${idade} anos</p>`
+                        }
+                    }
+                }
+
+
+            }
+        </script>
+
+    </section>
+
+    <footer>
+        <p> &copy; create by alessandro </p>
+    </footer>
+</body>
+
+</html>
